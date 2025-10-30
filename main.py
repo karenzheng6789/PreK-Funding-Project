@@ -1,16 +1,29 @@
-# This is a sample Python script.
+import csv
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+from sqlalchemy.sql.sqltypes import NULLTYPE
+
+preK_names = []
+license_type = []
+three_year_old_capacity = []
+four_year_old_capacity = []
+total_capacity = []
+test = []
+grade_and_subject = []
+valid_tests = []
+proficient_tests = []
+percent_proficient = []
+funding_source = []
+city_council_district = []
+commission_district = []
+super_district = []
+
+with open("prek_capacity_2024.csv", "r", newline="") as prek_file:
+    for line in prek_file:
+        line.strip()
+        parts = line.split(";")
+        print(parts)
+        for i in parts:
+            #if parts[i] != "-" :
+            preK_names.append(parts[0])
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
