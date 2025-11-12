@@ -28,7 +28,7 @@ proficient_tests = pd.to_numeric(df["Percent Proficient"])
 # Correlation between the funding source of
 # Pre-K programs in Memphis and student proficiency in reading/writing?
 
-# Drop rows missing either proficiency or funding
+# Drop rows with missing data in proficiency and funding
 df = df.dropna(subset=["Percent Proficient", "Funding Source", "Total Capacity"])
 
 # Central tendency per funding source
