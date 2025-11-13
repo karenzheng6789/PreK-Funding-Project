@@ -28,10 +28,25 @@ proficient_tests = pd.to_numeric(df["Percent Proficient"])
 # Correlation between the funding source of
 # Pre-K programs in Memphis and student proficiency in reading/writing?
 
-# Drop rows with missing data in proficiency and funding
-df = df.dropna(subset=["Percent Proficient", "Funding Source", "Total Capacity"])
+# Preprocessing
+df = df.dropna(subset=["Percent Proficient", "Funding Source", "Total Capacity"]) # remove missing data
 
-# Central tendency per funding source
+# Visualization
+order = df.groupby("Funding Source")["Percent Proficient"].mean().sort_values().index
+
+plt.figure(figsize=(10, 5))
+plt.boxplot(
+    [df.loc[df["Funding Source"] == fs, "Percent Proficient"].dropna() for fs in order],
+    labels=order,
+)
+
+plt.title("Pre-K Reading/Writing Proficiency by Funding Source")
+plt.xlabel("Funding Source")
+plt.ylabel("Percent Proficient")
+plt.tight_layout()
+plt.show()
+
+# Central tendency
 funding_summary = (
     df.groupby("Funding Source")["Percent Proficient"]
       .agg(["mean", "std", "count"])
@@ -46,6 +61,13 @@ corr = df[numeric_cols].corr()
 print("\nCorrelation Matrix")
 print(corr)
 
+# Clustering & K-Means
+
+# Density-based clustering (DBSCAN)
+
+# Synthesis & Interpretation
+
+# Outlier Detection
 
 # Quick report
 print("\nSUMMARY REPORT")
