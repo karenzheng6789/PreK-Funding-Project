@@ -1,6 +1,7 @@
 import csv
 import pandas as pd
 import matplotlib.pyplot as plt
+import capacity_vs_prof as cvp
 
 from sqlalchemy.sql.sqltypes import NULLTYPE
 
@@ -33,4 +34,8 @@ if __name__ == "__main__":
     df = load_data()
     print(f"Rows available for analysis: {len(df)}")
     print(df.head())
+    cvp.regression_line(df)
+    cvp.equal_width_partitioning(df)
+    cvp.k_means_clustering(df)
+
 
