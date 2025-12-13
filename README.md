@@ -74,7 +74,7 @@ Using open data from **DataMidSouth**, we performed data cleaning, exploratory d
 - **Commission District is the strongest predictor of proficiency**
 - Districts 1–4 consistently outperform Districts 5–13
 - Licensing comparisons were limited due to missing proficiency data for non-DOE centers
-![Average Literacy Proficiency by Commission District](figures/avg_proficiency_by_district.png)
+![Average Literacy Proficiency by Commission District](figures/district2.png)
 ---
 
 ## Interpretation
