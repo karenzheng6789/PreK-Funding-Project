@@ -99,5 +99,5 @@ Future analyses should expand assessment coverage across all licensing types and
 
 ## 📄 Full Report
 A detailed academic report with full statistical results and figures is available here:  
-**[Data Mining Study of Pre-K Literacy in Memphis – Full Report](link)**
+**[Data Mining Study of Pre-K Literacy in Memphis – Full Report](report/PreK_Literacy_Data_Mining_Report.pdf)**
 
